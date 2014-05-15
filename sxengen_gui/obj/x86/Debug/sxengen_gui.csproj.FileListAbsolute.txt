@@ -1,0 +1,9 @@
+E:\Users\idest_000\SkyDrive\Visual Studio 2010\Projects\sxengen_gui\sxengen_gui\obj\x86\Debug\sxengen_gui.exe
+E:\Users\idest_000\SkyDrive\Visual Studio 2010\Projects\sxengen_gui\sxengen_gui\obj\x86\Debug\sxengen_gui.pdb
+E:\Users\idest_000\SkyDrive\Visual Studio 2010\Projects\sxengen_gui\sxengen_gui\bin\Debug\sxengen_gui.exe
+E:\Users\idest_000\SkyDrive\Visual Studio 2010\Projects\sxengen_gui\sxengen_gui\bin\Debug\sxengen_gui.pdb
+E:\Users\idest_000\SkyDrive\Visual Studio 2010\Projects\sxengen_gui\sxengen_gui\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\Users\idest_000\SkyDrive\Visual Studio 2010\Projects\sxengen_gui\sxengen_gui\obj\x86\Debug\sxengen_gui.MainForm.resources
+E:\Users\idest_000\SkyDrive\Visual Studio 2010\Projects\sxengen_gui\sxengen_gui\obj\x86\Debug\sxengen_gui.Properties.Resources.resources
+E:\Users\idest_000\SkyDrive\Visual Studio 2010\Projects\sxengen_gui\sxengen_gui\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\Users\idest_000\SkyDrive\Visual Studio 2010\Projects\sxengen_gui\sxengen_gui\obj\x86\Debug\GenerateResource.write.1.tlog
