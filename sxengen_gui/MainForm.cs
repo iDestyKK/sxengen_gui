@@ -113,20 +113,29 @@ namespace sxengen_gui
         private void button_package_Click(object sender, EventArgs e)
         {
             //First off, write the text file to read data from.
+            tabConsole.SelectedTab = tabPageConsole;
             DialogResult sf = saveFileDialog.ShowDialog();
 
             if (sf == DialogResult.OK)
             {
                 writePackageFile("data_txt.ini");
-    
+
                 // Open the C++ Version of sxengen.
-                ProcessStartInfo startInfo = new ProcessStartInfo();
-                startInfo.FileName = "sxengen.exe";
+                ProcessStartInfo startInfo = new ProcessStartInfo
+                {
+                    UseShellExecute = false,
+                    CreateNoWindow = true,
+                    RedirectStandardOutput = true,
+                    WindowStyle = ProcessWindowStyle.Hidden,
+                    FileName = "sxengen.exe"
+                };
                 try
-                    {
+                {
                     using (Process exeProcess = Process.Start(startInfo))
                     {
-                        exeProcess.WaitForExit();
+                        while (!exeProcess.HasExited)
+                            richTextBox_console.Text = exeProcess.StandardOutput.ReadToEnd();
+                        //exeProcess.WaitForExit();
                     }
                 }
                 catch
@@ -134,10 +143,18 @@ namespace sxengen_gui
                     //Log I think...
                 }
 
+                if (File.Exists(saveFileDialog.FileName))
+                    File.Delete(saveFileDialog.FileName);
                 File.Move("pak.sxen", saveFileDialog.FileName);
+
+
+                //Delete the temp file.
+                File.Delete("data_txt.ini");
             }
-            //Delete the temp file.
-            File.Delete("data_txt.ini");
+            else
+            {
+                tabConsole.SelectedTab = tabMain;
+            }
         }
     }
 }

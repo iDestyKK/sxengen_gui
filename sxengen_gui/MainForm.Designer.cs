@@ -60,7 +60,8 @@
             this.button_package = new System.Windows.Forms.Button();
             this.button_addmisc = new System.Windows.Forms.Button();
             this.button_addaudio = new System.Windows.Forms.Button();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPageConsole = new System.Windows.Forms.TabPage();
+            this.richTextBox_console = new System.Windows.Forms.RichTextBox();
             this.openFileAudio = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -69,6 +70,7 @@
             this.splitContainer1.SuspendLayout();
             this.tabConsole.SuspendLayout();
             this.tabMain.SuspendLayout();
+            this.tabPageConsole.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainMenu1
@@ -139,7 +141,7 @@
             // tabConsole
             // 
             this.tabConsole.Controls.Add(this.tabMain);
-            this.tabConsole.Controls.Add(this.tabPage2);
+            this.tabConsole.Controls.Add(this.tabPageConsole);
             this.tabConsole.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabConsole.Location = new System.Drawing.Point(0, 0);
             this.tabConsole.Name = "tabConsole";
@@ -332,15 +334,27 @@
             this.button_addaudio.UseVisualStyleBackColor = true;
             this.button_addaudio.Click += new System.EventHandler(this.button_addaudio_Click);
             // 
-            // tabPage2
+            // tabPageConsole
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(439, 288);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Console";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPageConsole.Controls.Add(this.richTextBox_console);
+            this.tabPageConsole.Location = new System.Drawing.Point(4, 22);
+            this.tabPageConsole.Name = "tabPageConsole";
+            this.tabPageConsole.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageConsole.Size = new System.Drawing.Size(439, 288);
+            this.tabPageConsole.TabIndex = 1;
+            this.tabPageConsole.Text = "Console";
+            this.tabPageConsole.UseVisualStyleBackColor = true;
+            // 
+            // richTextBox_console
+            // 
+            this.richTextBox_console.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox_console.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.richTextBox_console.Font = new System.Drawing.Font("Lucida Console", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox_console.Location = new System.Drawing.Point(3, 3);
+            this.richTextBox_console.Name = "richTextBox_console";
+            this.richTextBox_console.Size = new System.Drawing.Size(433, 282);
+            this.richTextBox_console.TabIndex = 0;
+            this.richTextBox_console.Text = "";
             // 
             // saveFileDialog
             // 
@@ -364,6 +378,7 @@
             this.tabConsole.ResumeLayout(false);
             this.tabMain.ResumeLayout(false);
             this.tabMain.PerformLayout();
+            this.tabPageConsole.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -380,7 +395,7 @@
         private System.Windows.Forms.TreeView fileTreeView;
         private System.Windows.Forms.TabControl tabConsole;
         private System.Windows.Forms.TabPage tabMain;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPageConsole;
         private System.Windows.Forms.Button button_addmisc;
         private System.Windows.Forms.Button button_addaudio;
         private System.Windows.Forms.OpenFileDialog openFileAudio;
@@ -400,6 +415,7 @@
         private System.Windows.Forms.TextBox textBox_Name;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
+        private System.Windows.Forms.RichTextBox richTextBox_console;
     }
 }
 
