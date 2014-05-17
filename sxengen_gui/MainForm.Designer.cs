@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("AUDIO");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("MISC");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("file.sxen", new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2});
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("AUDIO");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("MISC");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("file.sxen", new System.Windows.Forms.TreeNode[] {
+            treeNode4,
+            treeNode5});
             this.mainMenu1 = new System.Windows.Forms.MainMenu(this.components);
             this.menuItem1 = new System.Windows.Forms.MenuItem();
             this.menuItem2 = new System.Windows.Forms.MenuItem();
@@ -126,17 +126,16 @@
             this.fileTreeView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.fileTreeView.Location = new System.Drawing.Point(0, 0);
             this.fileTreeView.Name = "fileTreeView";
-            treeNode1.Name = "AUDIO_NODE";
-            treeNode1.Text = "AUDIO";
-            treeNode2.Name = "MISC_NODE";
-            treeNode2.Text = "MISC";
-            treeNode3.Name = "FILE_NODE";
-            treeNode3.Text = "file.sxen";
+            treeNode4.Name = "AUDIO_NODE";
+            treeNode4.Text = "AUDIO";
+            treeNode5.Name = "MISC_NODE";
+            treeNode5.Text = "MISC";
+            treeNode6.Name = "FILE_NODE";
+            treeNode6.Text = "file.sxen";
             this.fileTreeView.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode3});
+            treeNode6});
             this.fileTreeView.Size = new System.Drawing.Size(225, 314);
             this.fileTreeView.TabIndex = 0;
-            this.fileTreeView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             // 
             // tabConsole
             // 
@@ -352,6 +351,7 @@
             this.richTextBox_console.Font = new System.Drawing.Font("Lucida Console", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox_console.Location = new System.Drawing.Point(3, 3);
             this.richTextBox_console.Name = "richTextBox_console";
+            this.richTextBox_console.ReadOnly = true;
             this.richTextBox_console.Size = new System.Drawing.Size(433, 282);
             this.richTextBox_console.TabIndex = 0;
             this.richTextBox_console.Text = "";

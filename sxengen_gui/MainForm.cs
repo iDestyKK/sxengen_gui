@@ -29,16 +29,12 @@ namespace sxengen_gui
             fileTreeView.Nodes["FILE_NODE"].Nodes["AUDIO_NODE"].Nodes.Clear();
             //Add in Audio Nodes
             for (int i = 0; i < audiofilepath_list.Count; i++)
-            {
                 fileTreeView.Nodes["FILE_NODE"].Nodes["AUDIO_NODE"].Nodes.Add("AUDIO" + i.ToString(), audiofilename_list[i]);
-            }
 
             fileTreeView.Nodes["FILE_NODE"].Nodes["MISC_NODE"].Nodes.Clear();
             //Add in Misc Nodes
             for (int i = 0; i < miscfilepath_list.Count; i++)
-            {
                 fileTreeView.Nodes["FILE_NODE"].Nodes["MISC_NODE"].Nodes.Add("MISC" + i.ToString(), miscfilename_list[i]);
-            }
             fileTreeView.ExpandAll();
         }
 
@@ -70,14 +66,12 @@ namespace sxengen_gui
             fp.WriteLine("\tcomment = " + textBox_Comment.Text);
             fp.WriteLine("[AUDIO]");
             for (int i = 0; i < audiofilepath_list.Count; i++)
-            {
                 fp.WriteLine("\tfile = " + audiofilepath_list[i]);
-            }
+
             fp.WriteLine("[MISC]");
             for (int i = 0; i < miscfilepath_list.Count; i++)
-            {
                 fp.WriteLine("\tfile = " + miscfilepath_list[i]);
-            }
+
             fp.Close();
         }
 
@@ -85,29 +79,16 @@ namespace sxengen_gui
         {
             DialogResult dr = openFileAudio.ShowDialog();
             if (dr == DialogResult.OK)
-            {
                 if (File.Exists(openFileAudio.FileName))
-                {
                     addAudioSlot(openFileAudio.FileName, Path.GetFileName(openFileAudio.FileName));
-                }
-            }
-        }
-
-        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
-        {
-
         }
 
         private void button_addmisc_Click(object sender, EventArgs e)
         {
             DialogResult dr = openFileAudio.ShowDialog();
             if (dr == DialogResult.OK)
-            {
                 if (File.Exists(openFileAudio.FileName))
-                {
                     addMiscSlot(openFileAudio.FileName, Path.GetFileName(openFileAudio.FileName));
-                }
-            }
         }
 
         private void button_package_Click(object sender, EventArgs e)
@@ -146,7 +127,6 @@ namespace sxengen_gui
                 if (File.Exists(saveFileDialog.FileName))
                     File.Delete(saveFileDialog.FileName);
                 File.Move("pak.sxen", saveFileDialog.FileName);
-
 
                 //Delete the temp file.
                 File.Delete("data_txt.ini");
